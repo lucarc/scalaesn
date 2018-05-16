@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/esn.iml" filepath="$PROJECT_DIR$/.idea/modules/esn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/esn_main.iml" filepath="$PROJECT_DIR$/.idea/modules/esn_main.iml" group="esn" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/esn_test.iml" filepath="$PROJECT_DIR$/.idea/modules/esn_test.iml" group="esn" />
+    </modules>
+  </component>
+</project>
