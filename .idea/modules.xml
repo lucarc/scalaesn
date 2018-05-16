@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/esn.iml" filepath="$PROJECT_DIR$/.idea/modules/esn.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/esn_main.iml" filepath="$PROJECT_DIR$/.idea/modules/esn_main.iml" group="esn" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/esn_test.iml" filepath="$PROJECT_DIR$/.idea/modules/esn_test.iml" group="esn" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalaesn.iml" filepath="$PROJECT_DIR$/.idea/modules/scalaesn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalaesn_main.iml" filepath="$PROJECT_DIR$/.idea/modules/scalaesn_main.iml" group="scalaesn" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalaesn_test.iml" filepath="$PROJECT_DIR$/.idea/modules/scalaesn_test.iml" group="scalaesn" />
     </modules>
   </component>
 </project>

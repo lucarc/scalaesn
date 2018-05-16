@@ -3,7 +3,7 @@ plugins {
     id 'scala'
 }
 
-group 'esn'
+group 'scalaesn'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8

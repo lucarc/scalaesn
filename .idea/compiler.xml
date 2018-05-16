@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="esn_main" target="1.8" />
       <module name="esn_test" target="1.8" />
+      <module name="scalaesn_main" target="1.8" />
+      <module name="scalaesn_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
