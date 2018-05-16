@@ -1,3 +1,4 @@
+import breeze.linalg.DenseMatrix
 import com.lucarc.scalaesn.ESN
 import com.lucarc.scalaesn.EchoStateNetwork
 import org.scalactic.{Equality, TolerantNumerics}
@@ -35,6 +36,8 @@ class ESNTest extends FeatureSpec with GivenWhenThen {
       val epsilon = 1e-4f
       implicit val doubleEq: Equality[Double] = TolerantNumerics.tolerantDoubleEquality(epsilon)
       assert(spectralRadius===breeze.linalg.max(breeze.linalg.eig(esn.reservoir).eigenvalues))
+
+      val x: DenseMatrix[Double] = DenseMatrix.rand(1,3)
 
 
     }
