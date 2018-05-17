@@ -1,4 +1,5 @@
-import breeze.linalg.{*, DenseMatrix}
+import breeze.linalg.{*, DenseMatrix, DenseVector}
+import com.lucarc.scalaesn.activations.Sigmoid
 import com.lucarc.scalaesn.{EchoStateNetwork, EchoStateNetworkImplementation}
 import com.lucarc.scalaesn.layers.{Reservoir, ReservoirImplementation}
 import org.scalactic.{Equality, TolerantNumerics}
@@ -22,7 +23,7 @@ class ESNTest extends FeatureSpec with GivenWhenThen {
       val sparsity: Double = 0.75
 
 
-      val reservoir: Reservoir = new ReservoirImplementation(nInput = nInput, nNeurons = nNeurons, sr = spectralRadius, sp = sparsity)
+      val reservoir: Reservoir = new ReservoirImplementation(nInput = nInput, nNeurons = nNeurons, sr = spectralRadius, sp = sparsity, activation = new Sigmoid)
 
       When("Network is created.")
 
@@ -55,8 +56,8 @@ class ESNTest extends FeatureSpec with GivenWhenThen {
       val sparsity: Double = 0.75
 
 
-      val samples: DenseMatrix[Double] = DenseMatrix.ones(nSamples, nInput)
-      samples(*, ::).foreach(row => println(row))
+      val samples: Seq[DenseVector[Double]] = {0 until nSamples}.map(i => DenseVector.ones[Double](nInput))
+      assert(nSamples == samples.size)
     }
 
 
@@ -76,17 +77,17 @@ class ESNTest extends FeatureSpec with GivenWhenThen {
       val sparsity: Double = 0.75
 
 
-      val reservoir: Reservoir = new ReservoirImplementation(nInput = nInput, nNeurons = nNeurons, sr = spectralRadius, sp = sparsity)
+      val reservoir: Reservoir = new ReservoirImplementation(nInput = nInput, nNeurons = nNeurons, sr = spectralRadius, sp = sparsity, activation = new Sigmoid)
       val esn: EchoStateNetwork = new EchoStateNetworkImplementation(reservoir = reservoir, readout = null)
 
       When("Network is created.")
 
       Then(s"Reservoir is a $nNeurons x $nNeurons matrix, Win is a $nInput X $nNeurons matrix.")
 
-      val samples: DenseMatrix[Double] = DenseMatrix.ones(nSamples, nInput)
-      val v: DenseMatrix[Double] = samples(*,::).map(sample => reservoir.activate(x = sample))
-      assertResult(nSamples)(v.rows)
-      assertResult(nNeurons)(v.cols)
+      val samples: Seq[DenseVector[Double]] = {0 until nSamples}.map(i => DenseVector.ones[Double](nInput))
+      val v: Seq[DenseVector[Double]] = samples.map(sample => reservoir.activate(x = sample))
+      assertResult(nSamples)(v.length)
+      v.foreach(vec => assertResult(nNeurons)(vec.length))
 
     }
 
