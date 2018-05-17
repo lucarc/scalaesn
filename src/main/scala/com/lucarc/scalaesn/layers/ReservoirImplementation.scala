@@ -9,27 +9,23 @@ class ReservoirImplementation(nInput: Int, nNeurons: Int, sr: Double, sp: Double
 
   val Wtemp: DenseMatrix[Double] = DenseMatrix.rand(nNeurons, nNeurons, rand)
   val Wsr: Double = breeze.linalg.max(breeze.linalg.eig(Wtemp).eigenvalues)
-  val W: DenseMatrix[Double] = (Wtemp /:/ Wsr) * sr
+  override val reservoir: DenseMatrix[Double] = (Wtemp /:/ Wsr) * sr
 
   // make the reservoir sparse
-  for (i <- 0 until nNeurons * nNeurons) if (rand.draw() > sp) W.data.update(i, 0)
-
-  val Win: DenseMatrix[Double] = DenseMatrix.rand(nInput, nNeurons, rand)
+  for (i <- 0 until nNeurons * nNeurons) if (rand.draw() > sp) reservoir.data.update(i, 0)
+  override val inputLayer: DenseMatrix[Double] = DenseMatrix.rand(nInput, nNeurons, rand)
 
   var v_t_1: DenseMatrix[Double] = DenseMatrix.rand(1, nNeurons, rand)
 
-  override def reservoir: DenseMatrix[Double] = W
-
-  override def inputLayer: DenseMatrix[Double] = Win
 
 
-  def activate(x: DenseMatrix[Double]): DenseMatrix[Double] = {
-    val v_t: DenseMatrix[Double] = (x * Win) + (v_t_1 * W)
+  override def activate(x: DenseMatrix[Double]): DenseMatrix[Double] = {
+    val v_t: DenseMatrix[Double] = (x * inputLayer) + (v_t_1 * reservoir)
     v_t_1 = v_t
     v_t
   }
 
-  override def train(x: DenseMatrix[Double]): Unit = ???
 
-  override def predict(x: DenseMatrix[Double]): DenseMatrix[Double] = ???
+
+
 }
