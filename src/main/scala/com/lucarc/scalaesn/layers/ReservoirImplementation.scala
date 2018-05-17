@@ -8,11 +8,11 @@ class ReservoirImplementation(nInput: Int, nNeurons: Int, sr: Double, sp: Double
   val rand: Rand[Double] = RandBasis.withSeed(seed).uniform
 
   val Wtemp: DenseMatrix[Double] = DenseMatrix.rand(nNeurons, nNeurons, rand)
-  val Wsr: Double = breeze.linalg.max(breeze.linalg.eig(Wtemp).eigenvalues)
-  override val reservoir: DenseMatrix[Double] = (Wtemp /:/ Wsr) * sr
 
   // make the reservoir sparse
-  for (i <- 0 until nNeurons * nNeurons) if (rand.draw() > sp) reservoir.data.update(i, 0)
+  for (i <- 0 until nNeurons * nNeurons) if (rand.draw() > sp) Wtemp.data.update(i, 0)
+  val Wsr: Double = breeze.linalg.max(breeze.linalg.eig(Wtemp).eigenvalues)
+  override val reservoir: DenseMatrix[Double] = (Wtemp /:/ Wsr) * sr
   override val inputLayer: DenseMatrix[Double] = DenseMatrix.rand(nInput, nNeurons, rand)
 
   var v_t_1: DenseMatrix[Double] = DenseMatrix.rand(1, nNeurons, rand)
