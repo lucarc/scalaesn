@@ -1,14 +1,14 @@
 package com.lucarc.scalaesn.readouts.implementation
 
-import breeze.linalg.DenseMatrix
+import breeze.linalg.{DenseMatrix, DenseVector}
 import breeze.storage.Zero
 import com.lucarc.scalaesn.readouts.Readout
 
 class LinearRegression(reg: Double, c: Double) extends Readout {
   override var weights: DenseMatrix[Double] = _
 
-  override def apply(x: DenseMatrix[Double]): DenseMatrix[Double] = {
-    val y: DenseMatrix[Double] = x * weights
+  override def apply(x: DenseVector[Double]): DenseVector[Double] = {
+    val y: DenseVector[Double] = weights * x
     y
   }
 

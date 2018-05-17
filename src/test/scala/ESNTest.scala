@@ -1,5 +1,5 @@
-import breeze.linalg.DenseMatrix
-import com.lucarc.scalaesn.layers.Reservoir
+import breeze.linalg.{*, DenseMatrix}
+import com.lucarc.scalaesn.{EchoStateNetwork, EchoStateNetworkImplementation}
 import com.lucarc.scalaesn.layers.{Reservoir, ReservoirImplementation}
 import org.scalactic.{Equality, TolerantNumerics}
 import org.scalatest.{FeatureSpec, GivenWhenThen}
@@ -22,7 +22,6 @@ class ESNTest extends FeatureSpec with GivenWhenThen {
       val sparsity: Double = 0.75
 
 
-
       val reservoir: Reservoir = new ReservoirImplementation(nInput = nInput, nNeurons = nNeurons, sr = spectralRadius, sp = sparsity)
 
       When("Network is created.")
@@ -37,11 +36,60 @@ class ESNTest extends FeatureSpec with GivenWhenThen {
       implicit val doubleEq: Equality[Double] = TolerantNumerics.tolerantDoubleEquality(epsilon)
       assert(breeze.linalg.max(breeze.linalg.eig(reservoir.reservoir).eigenvalues) === spectralRadius)
 
-      val x: DenseMatrix[Double] = DenseMatrix.rand(1,3)
-
+      val x: DenseMatrix[Double] = DenseMatrix.rand(1, 3)
 
     }
 
   }
+  feature("Dataset Slicing") {
+    scenario("Dataset is divided by rows for multimensional vectors") {
 
+      Given(
+        """
+          |
+        """.stripMargin)
+      val nNeurons: Int = 10
+      val nInput: Int = 3
+      val nSamples: Int = 20
+      val spectralRadius: Double = 0.75
+      val sparsity: Double = 0.75
+
+
+      val samples: DenseMatrix[Double] = DenseMatrix.ones(nSamples, nInput)
+      samples(*, ::).foreach(row => println(row))
+    }
+
+
+  }
+
+  feature("Reservoir Activation") {
+    scenario("Reservoir is constructed and activated successfully") {
+
+      Given(
+        """
+          |
+        """.stripMargin)
+      val nNeurons: Int = 10
+      val nInput: Int = 3
+      val nSamples: Int = 20
+      val spectralRadius: Double = 0.75
+      val sparsity: Double = 0.75
+
+
+      val reservoir: Reservoir = new ReservoirImplementation(nInput = nInput, nNeurons = nNeurons, sr = spectralRadius, sp = sparsity)
+      val esn: EchoStateNetwork = new EchoStateNetworkImplementation(reservoir = reservoir, readout = null)
+
+      When("Network is created.")
+
+      Then(s"Reservoir is a $nNeurons x $nNeurons matrix, Win is a $nInput X $nNeurons matrix.")
+
+      val samples: DenseMatrix[Double] = DenseMatrix.ones(nSamples, nInput)
+      val v: DenseMatrix[Double] = samples(*,::).map(sample => reservoir.activate(x = sample))
+      assertResult(nSamples)(v.rows)
+      assertResult(nNeurons)(v.cols)
+
+    }
+
+
+  }
 }

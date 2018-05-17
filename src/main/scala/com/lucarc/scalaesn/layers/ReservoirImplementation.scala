@@ -1,6 +1,6 @@
 package com.lucarc.scalaesn.layers
 
-import breeze.linalg.DenseMatrix
+import breeze.linalg.{DenseMatrix, DenseVector}
 import breeze.stats.distributions.{Rand, RandBasis}
 
 class ReservoirImplementation(nInput: Int, nNeurons: Int, sr: Double, sp: Double, seed: Int = 42) extends Reservoir {
@@ -15,12 +15,12 @@ class ReservoirImplementation(nInput: Int, nNeurons: Int, sr: Double, sp: Double
   override val reservoir: DenseMatrix[Double] = (Wtemp /:/ Wsr) * sr
   override val inputLayer: DenseMatrix[Double] = DenseMatrix.rand(nInput, nNeurons, rand)
 
-  var v_t_1: DenseMatrix[Double] = DenseMatrix.rand(1, nNeurons, rand)
+  var v_t_1: DenseVector[Double] = DenseVector.zeros(nNeurons)
 
 
 
-  override def activate(x: DenseMatrix[Double]): DenseMatrix[Double] = {
-    val v_t: DenseMatrix[Double] = (x * inputLayer) + (v_t_1 * reservoir)
+  override def activate(x: DenseVector[Double]): DenseVector[Double] = {
+    val v_t: DenseVector[Double] = (inputLayer * x) + (reservoir * v_t_1)
     v_t_1 = v_t
     v_t
   }
