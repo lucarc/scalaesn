@@ -1,8 +1,7 @@
 package com.lucarc.scalaesn.activations
 
-import shapeless.T
 
 trait ActivationFunction {
-  def activate[T](x: T): T
+  def activate(x: Double): Double
 
 }

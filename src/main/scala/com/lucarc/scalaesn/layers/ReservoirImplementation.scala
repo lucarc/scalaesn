@@ -24,7 +24,7 @@ class ReservoirImplementation(nInput: Int, nNeurons: Int, sr: Double, sp: Double
     val v2: DenseVector[Double] = reservoir * v_t_1
     val v1: DenseVector[Double] = inputLayer * x
     val v_t: DenseVector[Double] = v1+v2
-    v_t_1 = v_t.map(vi => activation.activate[Double](vi))
+    v_t_1 = v_t.map(vi => activation.activate(vi))
     v_t
   }
 

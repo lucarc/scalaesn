@@ -1,5 +1,7 @@
-import breeze.linalg.{*, DenseMatrix, DenseVector}
+import breeze.linalg.{DenseMatrix, DenseVector}
 import com.lucarc.scalaesn.activations.Sigmoid
+import com.lucarc.scalaesn.readouts.Readout
+import com.lucarc.scalaesn.readouts.implementation.LinearRegression
 import com.lucarc.scalaesn.{EchoStateNetwork, EchoStateNetworkImplementation}
 import com.lucarc.scalaesn.layers.{Reservoir, ReservoirImplementation}
 import org.scalactic.{Equality, TolerantNumerics}
@@ -15,7 +17,10 @@ class ESNTest extends FeatureSpec with GivenWhenThen {
 
       Given(
         """
-          |
+          | nNeurons = 10
+          | nInput = 3
+          | spectralRadius = 0.75
+          | sparsity = 0.75
         """.stripMargin)
       val nNeurons: Int = 10
       val nInput: Int = 3
@@ -30,8 +35,8 @@ class ESNTest extends FeatureSpec with GivenWhenThen {
       Then(s"Reservoir is a $nNeurons x $nNeurons matrix, Win is a $nInput X $nNeurons matrix.")
       assertResult(nNeurons)(reservoir.reservoir.rows)
       assertResult(nNeurons)(reservoir.reservoir.cols)
-      assertResult(nInput)(reservoir.inputLayer.rows)
-      assertResult(nNeurons)(reservoir.inputLayer.cols)
+      assertResult(nNeurons)(reservoir.inputLayer.rows)
+      assertResult(nInput)(reservoir.inputLayer.cols)
 
       val epsilon = 1e-4f
       implicit val doubleEq: Equality[Double] = TolerantNumerics.tolerantDoubleEquality(epsilon)
@@ -42,12 +47,18 @@ class ESNTest extends FeatureSpec with GivenWhenThen {
     }
 
   }
-  feature("Dataset Slicing") {
-    scenario("Dataset is divided by rows for multimensional vectors") {
+
+
+  feature("Reservoir Activation") {
+    scenario("Reservoir is constructed and activated successfully") {
 
       Given(
         """
-          |
+          | nNeurons = 10
+          | nInput = 3
+          | nSamples = 20
+          | spectralRadius = 0.75
+          | sparsity = 0.75
         """.stripMargin)
       val nNeurons: Int = 10
       val nInput: Int = 3
@@ -55,12 +66,15 @@ class ESNTest extends FeatureSpec with GivenWhenThen {
       val spectralRadius: Double = 0.75
       val sparsity: Double = 0.75
 
+      val reservoir: Reservoir = new ReservoirImplementation(nInput = nInput, nNeurons = nNeurons, sr = spectralRadius, sp = sparsity, activation = new Sigmoid)
 
+      When("Reservoir is created and fed with 20 samples of 3 doubles")
       val samples: Seq[DenseVector[Double]] = {0 until nSamples}.map(i => DenseVector.ones[Double](nInput))
-      assert(nSamples == samples.size)
+      val v: Seq[DenseVector[Double]] = samples.map(sample => reservoir.activate(x = sample))
+      Then(s"Reservoir is activated generating a 20x10 sequence..")
+      assertResult(nSamples)(v.length)
+      v.foreach(vec => assertResult(nNeurons)(vec.length))
     }
-
-
   }
 
   feature("Reservoir Activation") {
@@ -68,7 +82,11 @@ class ESNTest extends FeatureSpec with GivenWhenThen {
 
       Given(
         """
-          |
+          | nNeurons = 10
+          | nInput = 3
+          | nSamples = 20
+          | spectralRadius = 0.75
+          | sparsity = 0.75
         """.stripMargin)
       val nNeurons: Int = 10
       val nInput: Int = 3
@@ -76,21 +94,14 @@ class ESNTest extends FeatureSpec with GivenWhenThen {
       val spectralRadius: Double = 0.75
       val sparsity: Double = 0.75
 
+      val esn: EchoStateNetwork =  new EchoStateNetworkImplementation(reservoir = new ReservoirImplementation(nInput = nInput, nNeurons = nNeurons, sr = spectralRadius, sp = sparsity, activation = new Sigmoid), readout = new LinearRegression(reg = 1, c = 1))
 
-      val reservoir: Reservoir = new ReservoirImplementation(nInput = nInput, nNeurons = nNeurons, sr = spectralRadius, sp = sparsity, activation = new Sigmoid)
-      val esn: EchoStateNetwork = new EchoStateNetworkImplementation(reservoir = reservoir, readout = null)
-
-      When("Network is created.")
-
-      Then(s"Reservoir is a $nNeurons x $nNeurons matrix, Win is a $nInput X $nNeurons matrix.")
-
+      When("Reservoir is created and fed with 20 samples of 3 doubles")
       val samples: Seq[DenseVector[Double]] = {0 until nSamples}.map(i => DenseVector.ones[Double](nInput))
-      val v: Seq[DenseVector[Double]] = samples.map(sample => reservoir.activate(x = sample))
+      esn.fit()
+      Then(s"Reservoir is activated generating a 20x10 sequence..")
       assertResult(nSamples)(v.length)
       v.foreach(vec => assertResult(nNeurons)(vec.length))
-
     }
-
-
   }
 }

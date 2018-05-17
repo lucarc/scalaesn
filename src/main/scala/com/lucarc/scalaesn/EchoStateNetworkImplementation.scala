@@ -7,8 +7,8 @@ import com.lucarc.scalaesn.readouts.Readout
 class EchoStateNetworkImplementation(reservoir: Reservoir, readout: Readout) extends EchoStateNetwork {
 
 
-  override def fit(x: DenseMatrix[Double], yExpected: DenseMatrix[Double]): Unit = {
-    val v = x(*, ::).map(xSample => reservoir.activate(xSample))
+  override def fit(x: Seq[DenseVector[Double]], yExpected: Seq[DenseVector[Double]]): Unit = {
+    val v = x.map(xSample => reservoir.activate(xSample))
     readout.train(v, yExpected)
   }
 
