@@ -2,24 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d93c930f-5dd3-4fa5-aecd-bfcc288ae953" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetworkPredictor.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/Readout.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LR.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileContent/annotation-processors.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileContent/fileContent.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/ESN.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/ESN.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetwork.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetwork.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/ESN.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/Reservoir.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetwork.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/ReservoirImplementation.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetworkPredictor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetworkPredictor.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/Readout.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/Readout.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LR.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LR.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/ESNTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/ESNTest.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -39,12 +27,12 @@
     </projectState>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="EchoStateNetworkPredictor.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetworkPredictor.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
               <folding>
                 <element signature="e#29#61#0" expanded="true" />
               </folding>
@@ -52,11 +40,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LR.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LR.scala">
+      <file leaf-file-name="LinearRegression.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-216">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="180">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <folding>
+                <element signature="e#53#85#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReservoirImplementation.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/ReservoirImplementation.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+              <folding>
+                <element signature="e#29#61#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,8 +67,17 @@
       <file leaf-file-name="DenseMatrix.scala" pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.scalanlp/breeze_2.10/0.6.1/3aee012c6894b33f04e4444a1be77bfff25ff548/breeze_2.10-0.6.1-sources.jar!/breeze/linalg/DenseMatrix.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
+            <state relative-caret-position="18">
               <caret line="282" column="7" selection-start-line="282" selection-start-column="7" selection-end-line="282" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Readout.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/Readout.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -77,6 +89,9 @@
       <find>trans</find>
       <find>transpo</find>
     </findStrings>
+    <replaceStrings>
+      <replace>x</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -475,11 +490,12 @@
         <option value="$PROJECT_DIR$/src/test/scala/ESNTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/ESN.scala" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetwork.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/Readout.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetworkPredictor.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LR.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/Readout.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetwork.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/ReservoirImplementation.scala" />
       </list>
     </option>
   </component>
@@ -544,9 +560,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -588,16 +604,6 @@
               <item name="scala" type="462c0819:PsiDirectoryNode" />
               <item name="scalaesn" type="462c0819:PsiDirectoryNode" />
               <item name="readouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scalaesn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scalaesn" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="scalaesn" type="462c0819:PsiDirectoryNode" />
-              <item name="readouts" type="462c0819:PsiDirectoryNode" />
-              <item name="implementation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scalaesn" type="b2602c69:ProjectViewProjectNode" />
@@ -745,34 +751,34 @@
     <frame x="1920" y="25" width="1920" height="1010" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="sbt" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.3295325" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990878" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.3295325" />
+      <window_info anchor="right" id="sbt" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3295325" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2524013" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3295325" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25506938" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Gradle" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990878" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.3295325" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.3295325" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
@@ -793,6 +799,30 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetworkPredictor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="e#29#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.scalanlp/breeze_2.10/0.6.1/3aee012c6894b33f04e4444a1be77bfff25ff548/breeze_2.10-0.6.1-sources.jar!/breeze/linalg/DenseMatrix.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5076">
+          <caret line="282" column="7" selection-start-line="282" selection-start-column="7" selection-end-line="282" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LR.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -824,7 +854,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/ESN.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/Reservoir.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
@@ -835,23 +865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="53" column="72" selection-start-line="53" selection-start-column="72" selection-end-line="53" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/Readout.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetwork.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="26" column="56" lean-forward="true" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
-          <folding>
-            <element signature="e#29#61#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -869,20 +882,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LR.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#53#85#0" expanded="true" />
-          </folding>
+          <caret line="7" selection-start-line="7" selection-end-line="14" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetworkPredictor.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
           <folding>
             <element signature="e#29#61#0" expanded="true" />
           </folding>
@@ -891,15 +901,35 @@
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.scalanlp/breeze_2.10/0.6.1/3aee012c6894b33f04e4444a1be77bfff25ff548/breeze_2.10-0.6.1-sources.jar!/breeze/linalg/DenseMatrix.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
+        <state relative-caret-position="18">
           <caret line="282" column="7" selection-start-line="282" selection-start-column="7" selection-end-line="282" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LR.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/Readout.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        <state relative-caret-position="90">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="e#53#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/ReservoirImplementation.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding>
+            <element signature="e#29#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

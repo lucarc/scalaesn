@@ -1,6 +1,6 @@
 import breeze.linalg.DenseMatrix
-import com.lucarc.scalaesn.ESN
-import com.lucarc.scalaesn.EchoStateNetwork
+import com.lucarc.scalaesn.ReservoirImplementation
+import com.lucarc.scalaesn.layers.{Reservoir, ReservoirImplementation}
 import org.scalactic.{Equality, TolerantNumerics}
 import org.scalatest.{FeatureSpec, GivenWhenThen}
 
@@ -23,7 +23,7 @@ class ESNTest extends FeatureSpec with GivenWhenThen {
 
 
 
-      val esn: ESN = new EchoStateNetwork(nInput = nInput, nNeurons = nNeurons, sr = spectralRadius, sp = sparsity)
+      val esn: Reservoir = new ReservoirImplementation(nInput = nInput, nNeurons = nNeurons, sr = spectralRadius, sp = sparsity)
 
       When("Network is created.")
 

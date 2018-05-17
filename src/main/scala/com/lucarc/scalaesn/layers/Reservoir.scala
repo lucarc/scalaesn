@@ -1,8 +1,8 @@
-package com.lucarc.scalaesn
+package com.lucarc.scalaesn.layers
 
 import breeze.linalg.DenseMatrix
 
-trait ESN {
+trait Reservoir {
 
   def reservoir: DenseMatrix[Double]
   def inputLayer: DenseMatrix[Double]

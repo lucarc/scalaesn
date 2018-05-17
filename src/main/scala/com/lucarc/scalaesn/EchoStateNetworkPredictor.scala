@@ -1,14 +1,15 @@
 package com.lucarc.scalaesn
 
 import breeze.linalg.DenseMatrix
+import com.lucarc.scalaesn.layers.ReservoirImplementation
 import com.lucarc.scalaesn.readouts.Readout
-import nak.regress.LinearRegression
-class EchoStateNetworkPredictor(echoStateNetwork: EchoStateNetwork, readout: Readout) {
+
+class EchoStateNetworkPredictor(echoStateNetwork: ReservoirImplementation, readout: Readout) extends EchoStateNetwork {
 
 
-  def train(x: DenseMatrix[Double]): Unit = {
+  override def fit(x: DenseMatrix[Double], yExpected: DenseMatrix[Double]): Unit = {
     echoStateNetwork.activate(x)
   }
 
-  def predict(x: DenseMatrix[Double]): DenseMatrix[Double] = ???
+  override def transform(x: DenseMatrix[Double]): DenseMatrix[Double] = ???
 }
