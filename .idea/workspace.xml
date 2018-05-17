@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d93c930f-5dd3-4fa5-aecd-bfcc288ae953" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/scala/DataFormatting.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/ESNTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/ESNTest.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -37,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ESNTest.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ESNTest.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/ESNTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
+            <state relative-caret-position="104">
               <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
@@ -70,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LinearRegression.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LinearRegression.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+            <state relative-caret-position="300">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
               <folding>
                 <element signature="e#53#100#0" expanded="true" />
               </folding>
@@ -518,8 +515,8 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/activations/Sigmoid.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/layers/ReservoirImplementation.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/DataFormatting.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/ESNTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala" />
       </list>
     </option>
   </component>
@@ -841,18 +838,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ESNTest - 2018.05.17 at 15h 54m 21s.xml">
-      <configuration name="ESNTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="ESNTest - 2018.05.17 at 15h 54m 49s.xml">
-      <configuration name="ESNTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="ESNTest - 2018.05.17 at 15h 57m 12s.xml">
-      <configuration name="ESNTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="ESNTest - 2018.05.17 at 15h 57m 52s.xml">
-      <configuration name="ESNTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
     <history-entry file="DataFormatting - 2018.05.17 at 23h 37m 00s.xml">
       <configuration name="DataFormatting" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
@@ -869,6 +854,18 @@
       <configuration name="ESNTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
     <history-entry file="ESNTest - 2018.05.17 at 23h 40m 14s.xml">
+      <configuration name="ESNTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="ESNTest - 2018.05.17 at 23h 41m 02s.xml">
+      <configuration name="ESNTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="ESNTest - 2018.05.17 at 23h 42m 30s.xml">
+      <configuration name="ESNTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="ESNTest - 2018.05.17 at 23h 42m 40s.xml">
+      <configuration name="ESNTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="ESNTest - 2018.05.17 at 23h 42m 52s.xml">
       <configuration name="ESNTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
   </component>
@@ -1086,16 +1083,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetworkImplementation.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-          <folding>
-            <element signature="e#29#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/DataFormatting.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1106,22 +1093,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/ESNTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+        <state relative-caret-position="104">
+          <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
           <folding>
-            <element signature="e#53#100#0" expanded="true" />
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/ESNTest.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetworkImplementation.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+        <state relative-caret-position="90">
+          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
           <folding>
-            <element signature="e#0#47#0" expanded="true" />
+            <element signature="e#29#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding>
+            <element signature="e#53#100#0" expanded="true" />
           </folding>
         </state>
       </provider>

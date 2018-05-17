@@ -98,9 +98,10 @@ class ESNTest extends FeatureSpec with GivenWhenThen {
 
       When("Reservoir is created and fed with 20 samples of 3 doubles")
       val samples: Seq[DenseVector[Double]] = {0 until nSamples}.map(i => DenseVector.ones[Double](nInput))
+      val yExpected: Seq[DenseVector[Double]] = {0 until nSamples}.map(i => DenseVector.ones[Double](nInput))
 
       Then(s"Reservoir is activated generating a 20x10 sequence..")
-
+      esn.fit(samples, yExpected)
     }
   }
 }
