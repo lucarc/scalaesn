@@ -16,15 +16,14 @@ class ReservoirImplementation(nInput: Int, nNeurons: Int, sr: Double, sp: Double
   override val reservoir: DenseMatrix[Double] = (Wtemp /:/ Wsr) * sr
   override val inputLayer: DenseMatrix[Double] = DenseMatrix.rand(nNeurons, nInput, rand)
 
-  var v_t_1: DenseVector[Double] = DenseVector.zeros(nNeurons)
+  var v_t_1: DenseVector[Double] = DenseVector.rand(nNeurons, rand)
 
 
 
   override def activate(x: DenseVector[Double]): DenseVector[Double] = {
-    val v2: DenseVector[Double] = reservoir * v_t_1
-    val v1: DenseVector[Double] = inputLayer * x
-    val v_t: DenseVector[Double] = v1+v2
-    v_t_1 = v_t.map(vi => activation.activate(vi))
+    val v_t_preact: DenseVector[Double] = reservoir * v_t_1 + inputLayer * x
+    val v_t: DenseVector[Double] = v_t_preact.map(vi => activation.activate(vi))
+    v_t_1 = v_t.copy
     v_t
   }
 
