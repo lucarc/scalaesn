@@ -4,16 +4,28 @@ import com.lucarc.scalaesn.layers.Reservoir
 import com.lucarc.scalaesn.readouts.Readout
 import org.slf4j.{Logger, LoggerFactory}
 
-import scala.collection.parallel.ForkJoinTaskSupport
+import scala.collection.parallel.{ForkJoinTaskSupport, ParSeq}
 import scala.collection.parallel.mutable.ParArray
 
 class EchoStateNetworkImplementation(reservoir: Reservoir, readout: Readout) extends EchoStateNetwork {
   val _log: Logger = LoggerFactory.getLogger(EchoStateNetworkImplementation.super.toString)
 
+  override def fit(x: ParSeq[SparseVector[Double]], yExpected: ParSeq[SparseVector[Double]], numThreads: Int): Unit = {
+    _log.info("Fitting >>>")
+    x.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(numThreads))
+    val start: Long = System.currentTimeMillis()
+    _log.info("Computing V...")
+    val v = x.map(xSample => reservoir.activate(xSample))
+    _log.info(s"Reservoir activations computed in ${System.currentTimeMillis() - start} milliseconds")
+    _log.info("Training Readout...")
+    readout.train(v.seq, yExpected.seq)
+    _log.info("Fitting <<<")
 
+  }
   override def fit(x: Seq[SparseVector[Double]], yExpected: Seq[SparseVector[Double]], numThreads: Int): Unit = {
     _log.info("Fitting >>>")
     val parX: ParArray[SparseVector[Double]] = ParArray.fromTraversables(x)
+
     parX.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(numThreads))
     val start: Long = System.currentTimeMillis()
     _log.info("Computing V...")

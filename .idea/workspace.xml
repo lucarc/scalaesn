@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d93c930f-5dd3-4fa5-aecd-bfcc288ae953" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file.csv" beforeDir="false" afterPath="$PROJECT_DIR$/file.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetwork.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetwork.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetworkImplementation.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetworkImplementation.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/Main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -33,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+            <state relative-caret-position="487">
+              <caret line="40" column="41" lean-forward="true" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
               <folding>
                 <element signature="e#29#72#0" expanded="true" />
               </folding>
@@ -66,8 +65,8 @@
       <file leaf-file-name="LinearRegression.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="31" />
+            <state relative-caret-position="286">
+              <caret line="32" column="55" lean-forward="true" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
               <folding>
                 <element signature="e#53#112#0" expanded="true" />
               </folding>
@@ -78,17 +77,20 @@
       <file leaf-file-name="EchoStateNetwork.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetwork.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
+            <state relative-caret-position="144">
+              <caret line="8" column="100" selection-start-line="8" selection-start-column="100" selection-end-line="8" selection-end-column="100" />
+              <folding>
+                <element signature="e#29#62#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EchoStateNetworkImplementation.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EchoStateNetworkImplementation.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetworkImplementation.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+            <state relative-caret-position="87">
+              <caret line="7" column="49" lean-forward="true" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
               <folding>
                 <element signature="e#28#61#0" expanded="true" />
               </folding>
@@ -554,10 +556,10 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/layers/Reservoir.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/Readout.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/layers/ReservoirImplementation.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetwork.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetworkImplementation.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/Main.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetwork.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetworkImplementation.scala" />
       </list>
     </option>
   </component>
@@ -958,7 +960,7 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295325" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3295325" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3295325" />
       <window_info id="Capture Tool" order="2" />
@@ -1062,6 +1064,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding>
+            <element signature="e#29#62#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1364,39 +1369,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetwork.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/readouts/implementation/LinearRegression.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="31" />
+        <state relative-caret-position="286">
+          <caret line="32" column="55" lean-forward="true" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
           <folding>
             <element signature="e#53#112#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetworkImplementation.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+        <state relative-caret-position="487">
+          <caret line="40" column="41" lean-forward="true" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
           <folding>
-            <element signature="e#28#61#0" expanded="true" />
+            <element signature="e#29#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/Main.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetwork.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        <state relative-caret-position="144">
+          <caret line="8" column="100" selection-start-line="8" selection-start-column="100" selection-end-line="8" selection-end-column="100" />
           <folding>
-            <element signature="e#29#72#0" expanded="true" />
+            <element signature="e#29#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/lucarc/scalaesn/EchoStateNetworkImplementation.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="7" column="49" lean-forward="true" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+          <folding>
+            <element signature="e#28#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
