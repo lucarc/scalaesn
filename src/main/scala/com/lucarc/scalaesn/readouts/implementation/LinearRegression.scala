@@ -18,18 +18,23 @@ class LinearRegression(reg: Double, c: Double) extends Readout {
   override def train(x: Seq[SparseVector[Double]], yExpected: Seq[SparseVector[Double]]): Unit = {
 
     _log.info("Training >>>")
+    val start: Long = System.currentTimeMillis()
     implicit val z: Zero[Double] = breeze.storage.Zero.DoubleZero
-    val xMatrix: DenseMatrix[Double] = DenseMatrix(x.flatMap(_.data)).reshape(x.length, x.head.length)
-    val yMatrix: DenseMatrix[Double] = DenseMatrix(yExpected.flatMap(_.data)).reshape(yExpected.length, yExpected.head.length)
-    val y1: DenseMatrix[Double] = xMatrix.t * xMatrix +  DenseMatrix.eye(xMatrix.cols) *:* reg
-    _log.info("Inverting Matrix")
-    val xMatrixCSC: CSCMatrix[Double] = CSCMatrix.create[Double](xMatrix.rows,xMatrix.cols, xMatrix.data)
-    val yMatrixCSC: CSCMatrix[Double] = CSCMatrix.create[Double](yMatrix.rows,yMatrix.cols, yMatrix.data)
-    val y1CSC: CSCMatrix[Double] = CSCMatrix.create[Double](y1.rows,y1.cols, y1.data)
+    _log.info("Creating xMatrix")
+    _log.info("Creating yMatrix")
+    val xMatrix: CSCMatrix[Double] = CSCMatrix.create[Double](x.length, x.head.length, x.flatMap(_.data).toArray)
+    val yMatrix: CSCMatrix[Double] = CSCMatrix.create[Double](yExpected.length, yExpected.head.length, yExpected.flatMap(_.data).toArray)
+
+    _log.info("yMatrix y1")
+    val eye: DenseMatrix[Double] = DenseMatrix.eye(xMatrix.cols)
+    val eyeCSC: CSCMatrix[Double] = CSCMatrix.create(eye.rows, eye.cols, eye.data)
+    val y1: CSCMatrix[Double] = xMatrix.t * xMatrix + eyeCSC *:* reg
+
+    _log.info("Inverting Matrix and computing weights")
+    weights = (y1 \ (xMatrix.t * yMatrix)).t
+    _log.info(s"Readout Trained in ${System.currentTimeMillis() - start} milliseconds")
 
 
-    weights = (y1CSC \ (xMatrixCSC.t * yMatrixCSC)).t
     _log.info("Training <<<")
-
   }
 }
