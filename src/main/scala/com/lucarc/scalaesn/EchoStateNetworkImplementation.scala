@@ -1,6 +1,6 @@
 package com.lucarc.scalaesn
 
-import breeze.linalg.{*, DenseMatrix, DenseVector}
+import breeze.linalg.{*, DenseMatrix, DenseVector, SparseVector}
 import com.lucarc.scalaesn.layers.Reservoir
 import com.lucarc.scalaesn.readouts.Readout
 import org.slf4j.{Logger, LoggerFactory}
@@ -9,7 +9,7 @@ class EchoStateNetworkImplementation(reservoir: Reservoir, readout: Readout) ext
   val _log: Logger = LoggerFactory.getLogger(EchoStateNetworkImplementation.super.toString)
 
 
-  override def fit(x: Seq[DenseVector[Double]], yExpected: Seq[DenseVector[Double]]): Unit = {
+  override def fit(x: Seq[SparseVector[Double]], yExpected: Seq[SparseVector[Double]]): Unit = {
     _log.info("Fitting >>>")
     _log.info("Computing V...")
     val v = x.map(xSample => reservoir.activate(xSample))
@@ -19,7 +19,7 @@ class EchoStateNetworkImplementation(reservoir: Reservoir, readout: Readout) ext
 
   }
 
-  override def transform(x: DenseVector[Double]): DenseVector[Double] = {
+  override def transform(x: SparseVector[Double]): SparseVector[Double] = {
     _log.info(s"Applying readout transformation to $x...")
     readout.apply(reservoir.activate(x))
   }

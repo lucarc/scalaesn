@@ -1,13 +1,13 @@
 package com.lucarc.scalaesn.layers
 
-import breeze.linalg.{DenseMatrix, DenseVector}
+import breeze.linalg.{CSCMatrix, SparseVector}
 
 trait Reservoir {
 
-  val reservoir: DenseMatrix[Double]
-  val inputLayer: DenseMatrix[Double]
+  val reservoir: CSCMatrix[Double]
+  val inputLayer: CSCMatrix[Double]
 
-  var v_t_1: DenseVector[Double]
+  var v_t_1: SparseVector[Double]
 
-  def activate(x: DenseVector[Double]): DenseVector[Double]
+  def activate(x: SparseVector[Double]): SparseVector[Double]
 }

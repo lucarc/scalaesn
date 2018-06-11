@@ -1,6 +1,6 @@
 package com.lucarc.scalaesn.readouts.implementation
 
-import breeze.linalg.{CSCMatrix, DenseMatrix, DenseVector}
+import breeze.linalg.{CSCMatrix, DenseMatrix, SparseVector}
 import breeze.storage.Zero
 import com.lucarc.scalaesn.readouts.Readout
 import org.slf4j.{Logger, LoggerFactory}
@@ -10,12 +10,12 @@ class LinearRegression(reg: Double, c: Double) extends Readout {
 
   override var weights: CSCMatrix[Double] = _
 
-  override def apply(x: DenseVector[Double]): DenseVector[Double] = {
-    val y: DenseVector[Double] = weights * x
+  override def apply(x: SparseVector[Double]): SparseVector[Double] = {
+    val y: SparseVector[Double] = weights * x
     y
   }
 
-  override def train(x: Seq[DenseVector[Double]], yExpected: Seq[DenseVector[Double]]): Unit = {
+  override def train(x: Seq[SparseVector[Double]], yExpected: Seq[SparseVector[Double]]): Unit = {
 
     _log.info("Training >>>")
     implicit val z: Zero[Double] = breeze.storage.Zero.DoubleZero
