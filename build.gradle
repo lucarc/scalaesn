@@ -14,8 +14,7 @@ repositories {
 
 dependencies {
     compile 'org.scala-lang:scala-library:2.11.5'
-    compile 'org.scalanlp:breeze_2.11:0.13.2'
-    compile 'org.scalanlp:nak:1.2.1'
+    compile group: 'org.scalanlp', name: 'breeze_2.11', version: '1.0-RC2'
     compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
     // https://mvnrepository.com/artifact/org.vegas-viz/vegas
     compile group: 'org.vegas-viz', name: 'vegas_2.11', version: '0.3.11'

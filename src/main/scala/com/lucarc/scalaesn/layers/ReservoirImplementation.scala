@@ -1,6 +1,6 @@
 package com.lucarc.scalaesn.layers
 
-import breeze.linalg.{DenseMatrix, DenseVector}
+import breeze.linalg.{CSCMatrix, DenseMatrix, DenseVector}
 import breeze.stats.distributions.{Rand, RandBasis}
 import com.lucarc.scalaesn.activations.ActivationFunction
 

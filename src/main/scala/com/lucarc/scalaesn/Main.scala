@@ -7,10 +7,10 @@ import com.lucarc.scalaesn.readouts.implementation.LinearRegression
 
 object Main {
 
-  val numTrain: Int = 500
-  val numTest: Int = 100
+  val numTrain: Int = 50000
+  val numTest: Int = 1000
 
-  val t: Int = 10
+  val t: Int = 3
 
   val trainX: Seq[DenseVector[Double]] = (0 until numTrain).toList.map(deg => DenseVector(breeze.numerics.sin.sinDoubleImpl(deg)))
   val trainY: Seq[DenseVector[Double]] = (t until numTrain + t).toList.map(deg => DenseVector(breeze.numerics.sin.sinDoubleImpl(deg)))
@@ -21,6 +21,8 @@ object Main {
   val spectralRadius: Double = 0.7
   val sparsity: Double = 0.80
 
+  val washout: Int = 15
+
 
   def main(args: Array[String]): Unit = {
 
@@ -28,8 +30,11 @@ object Main {
     esn.fit(trainX, trainY)
 
     val predictedTestY: Seq[DenseVector[Double]] = testX.map(xi => esn.transform(x = xi))
-    val gionas = (testY zip predictedTestY).flatMap(yVEP => (yVEP._1.data zip yVEP._2.data).map(y => (y._1 - y._2) * (y._1 - y._2))).sum / testY.length
-    println(s"MSE $gionas")
+    val unrolledData = (testY zip predictedTestY).flatMap(yVEP => yVEP._1.data zip yVEP._2.data)
+    val washedOutData = unrolledData.drop(washout)
 
+    val mse: Double = washedOutData.map(y => (y._1 - y._2) * (y._1 - y._2)).sum / washedOutData.length
+    System.out.print(mse)
+    System.exit(0)
   }
 }
