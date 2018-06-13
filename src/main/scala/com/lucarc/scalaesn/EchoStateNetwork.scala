@@ -4,8 +4,12 @@ import breeze.linalg.SparseVector
 
 import scala.collection.parallel.ParSeq
 
-trait EchoStateNetwork {
+@SerialVersionUID(100L)
+trait EchoStateNetwork  extends Serializable{
   def fit(x: Seq[SparseVector[Double]], yExpected: Seq[SparseVector[Double]], numThreads: Int): Unit
   def fit(x: ParSeq[SparseVector[Double]], yExpected: ParSeq[SparseVector[Double]], numThreads: Int): Unit
   def transform(x: SparseVector[Double]): SparseVector[Double]
+
+  def dump(filepath: String): Unit
+  def load(filepath: String): EchoStateNetwork
 }
