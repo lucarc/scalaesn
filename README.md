@@ -9,8 +9,11 @@ output. Notable examples of reservoir computing systems are Liquid State Machine
 Echo State Networks (ESN).
 Based on the model proposed in  Adaptive Nonlinear System Identification with Echo State Networks by H. Jaeger,  for Echo State Networks, we consider here a reservoir
 computing system made up of three distinct layers:
+
 1.input layer, which maps the input signal onto the reservoir in feed-forward mode;
+
 2.reservoir layer, which is the truly recursive neural net (RNN).
+
 3.readout layer, which is a feed-forward neural network that maps the state of the
 reservoir to the output desired.
 
