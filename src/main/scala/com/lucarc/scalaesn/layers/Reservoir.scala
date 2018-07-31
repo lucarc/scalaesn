@@ -3,7 +3,7 @@ package com.lucarc.scalaesn.layers
 import breeze.linalg.{CSCMatrix, SparseVector}
 
 @SerialVersionUID(101L)
-trait Reservoir extends Serializable{
+trait Reservoir extends Serializable {
 
   val reservoir: CSCMatrix[Double]
   val inputLayer: CSCMatrix[Double]

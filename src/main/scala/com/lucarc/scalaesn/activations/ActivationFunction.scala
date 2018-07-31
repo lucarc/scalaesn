@@ -1,7 +1,6 @@
 package com.lucarc.scalaesn.activations
 
-@SerialVersionUID(103L)
-trait ActivationFunction extends Serializable{
+trait ActivationFunction {
   def activate(x: Double): Double
 
 }

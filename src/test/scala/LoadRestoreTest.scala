@@ -22,9 +22,14 @@ class LoadRestoreTest extends FeatureSpec with GivenWhenThen {
       val spectralRadius: Double = 0.75
       val sparsity: Double = 0.75
 
-      val esn: EchoStateNetwork =  new EchoStateNetworkImplementation(reservoir = new ReservoirImplementation(nInput = nInput, nNeurons = nNeurons, sr = spectralRadius, sp = sparsity, activation = new Sigmoid), readout = new LinearRegression(reg = 1, c = 1))
-      esn.dump("./dump.esn")
 
+
+      val esn: EchoStateNetwork =  new EchoStateNetworkImplementation(reservoir = new ReservoirImplementation(nInput = nInput, nNeurons = nNeurons, sr = spectralRadius, sp = sparsity, activation = new Sigmoid), readout = new LinearRegression(reg = 1, c = 1))
+      val classLoader: ClassLoader = getClass.getClassLoader
+      val esnFilePath: String = classLoader.getResource(".").getPath.concat("dump.esn")
+      esn.dump(esnFilePath)
+
+      System.exit(0)
 
     }
   }
