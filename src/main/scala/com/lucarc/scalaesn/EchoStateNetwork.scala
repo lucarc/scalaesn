@@ -9,6 +9,4 @@ trait EchoStateNetwork {
   def fit(x: ParSeq[SparseVector[Double]], yExpected: ParSeq[SparseVector[Double]], numThreads: Int): Unit
   def transform(x: SparseVector[Double]): SparseVector[Double]
 
-  def dump(filepath: String): Unit
-  def load(filepath: String): EchoStateNetwork
 }

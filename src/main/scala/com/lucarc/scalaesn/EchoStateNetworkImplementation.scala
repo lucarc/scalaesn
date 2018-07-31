@@ -63,18 +63,4 @@ class EchoStateNetworkImplementation(reservoir: Reservoir, readout: Readout) ext
     readout.apply(reservoir.activate(x))
   }
 
-  override def dump(filepath: String): Unit = {
-    // (2) write the instance out to a file
-    val oos = new ObjectOutputStream(new FileOutputStream(filepath))
-    oos.writeObject(this)
-    oos.close()
-  }
-
-  override def load(filepath: String): EchoStateNetwork = {
-    // (3) read the object back in
-    val ois = new ObjectInputStream(new FileInputStream(filepath))
-    val esn = ois.readObject.asInstanceOf[EchoStateNetwork]
-    ois.close()
-    esn
-  }
 }
