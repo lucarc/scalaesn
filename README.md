@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+# scalaesn
+a Scala Breeze implementation of an Echo State Network
 
-You can use the [editor on GitHub](https://github.com/lucarc/scalaesn/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Reservoir computing is a computational framework for recurrent neural networks in which
+the input signal is fed into a large, recurrent pool of neurons called reservoir. The reservoir
+is used to map the input to a higher dimension and a simple readout layer (usually a linear
+or ridge regression) is then trained to read the state of the reservoir and map to the desired
+output. Notable examples of reservoir computing systems are Liquid State Machines and
+Echo State Networks (ESN).
+Based on the model proposed in  Adaptive Nonlinear System Identification with Echo State Networks by H. Jaeger,  for Echo State Networks, we consider here a reservoir
+computing system made up of three distinct layers:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+1. input layer, which maps the input signal onto the reservoir in feed-forward mode;
 
-### Markdown
+2. reservoir layer, which is the truly recursive neural net (RNN).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+3. readout layer, which is a feed-forward neural network that maps the state of the
+reservoir to the output desired.
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/lucarc/scalaesn/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+With ESNs, the readout layer is the only component of the network that is trained, via
+supervised training, while the weights in both the input and the reservoir are initialized at
+random, with some post-processing, and never trained afterwards. 
