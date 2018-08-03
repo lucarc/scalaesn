@@ -19,4 +19,4 @@ reservoir to the output desired.
 
 With ESNs, the readout layer is the only component of the network that is trained, via
 supervised training, while the weights in both the input and the reservoir are initialized at
-random, with some post-processing (see below), and never trained afterwards. 
+random, with some post-processing, and never trained afterwards. 
